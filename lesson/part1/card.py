@@ -6,6 +6,7 @@
 # @author: chenyongjian@jituia.com
 #
 import collections
+from random import choice
 
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
@@ -30,5 +31,18 @@ class FrenchDeck:
 deck = FrenchDeck()
 # print(deck[-1])
 
-for card in reversed(deck):
-    print(card)
+# for card in reversed(deck):
+#     print(card)
+
+# print(choice(deck))
+
+# print(deck[::3])
+
+suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
+def spades_high(card):
+    rank_value = FrenchDeck.ranks.index(card.rank)
+    print(rank_value * len(suit_values) + suit_values[card.suit])
+    return rank_value * len(suit_values) + suit_values[card.suit]
+
+for card in sorted(deck, key=spades_high):
+    pass
