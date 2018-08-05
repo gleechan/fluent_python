@@ -13,3 +13,4 @@ for passport in sorted(traveler_ids):
 
 for country, _ in traveler_ids:
     print(country)
+
