@@ -50,7 +50,9 @@ def spades_high(card):
     return rank_value * len(suit_values) + suit_values[card.suit]
 
 
-for card in sorted(deck, key=spades_high):
-    pass
+# for card in sorted(deck, key=spades_high):
+#     print(card)
 
-print(Card.__contains__)
+# print(Card.__contains__)
+
+print(deck[12::13])
