@@ -6,6 +6,7 @@
 # @author: chenyongjian@jituia.com
 #
 from array import array
+
 from random import random
 
 # import time
@@ -22,6 +23,7 @@ from random import random
 # print(floats2 == floats)
 #
 # print(round(time.time() - s, 2))
+# print(floats2.typecode)
 
 arr = array('h', [-2, -1, 0, 1, 2])
 memv = memoryview(arr)
@@ -31,3 +33,9 @@ print(memv_oct.format)
 print(memv_oct.tolist())
 memv_oct[5] = 2
 print(arr)
+
+# numbers = array('h', [-2, -1, 0, 1, 2])
+# menv = memoryview(numbers)
+# menv.tolist()
+# memv_oct = menv.cast('B')
+# print(memv_oct.tolist())
